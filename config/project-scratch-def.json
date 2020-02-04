@@ -1,14 +1,9 @@
 {
-	"country"    : "US",
 	"edition"    : "Developer",
 	"settings"   : {
-		"lightningExperienceSettings" : {
-			"enableS1DesktopEnabled" : true
-		},
 		"mobileSettings"              : {
-			"enableS1EncryptedStoragePref2" : true
+			"enableS1EncryptedStoragePref2" : false
 		}
 	},
-	"orgName"    : "Valence Stripe Adapter",
-	"adminEmail" : "dev+stripe-adapter@valence.app"
+	"orgName"    : "Valence Stripe Adapter"
 }
