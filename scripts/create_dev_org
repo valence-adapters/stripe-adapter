@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Run this script to set up a scratch org for development
+
+echo "Creating scratch org..."
+sfdx force:org:create -s -f config/project-scratch-def.json -a 'valenceStripeAdapter'
+
+echo "Installing Valence 1.49..."
+sfdx force:package:install --package 04t4p000001liJ0 --wait 10 -u valenceStripeAdapter
+
+echo "Pushing source code..."
+sfdx force:source:push
+
+echo "Assigning Valence permission set to default user..."
+sfdx force:user:permset:assign -n Valence_User
+
+echo "Opening org..."
+sfdx force:org:open
